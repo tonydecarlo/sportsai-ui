@@ -1,0 +1,22 @@
+# 📝 Vercel Configuration File (Optional)
+
+Create `ui/vercel.json` for custom configuration:
+
+```json
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "devCommand": "npm run dev",
+  "installCommand": "npm install",
+  "framework": "vite",
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://your-railway-api.up.railway.app/api/:path*"
+    }
+  ]
+}
+```
+
+**Note:** This is optional - Vercel auto-detects Vite! But you can use it for custom API proxy if needed.
+
